@@ -1,0 +1,30 @@
+.formField {
+  position: relative;
+  * {
+    transition: $transition-duration;
+  }
+  label {
+    position: absolute;
+    pointer-events: none;
+    top: 14px;
+    left: 9px;
+    background: $color-main-light;
+    padding: 0 4px;
+    text-transform: capitalize;
+    @include font-josefin(regular, 14px, $color-main-border, 18px, 0.015em);
+  }
+  input {
+    &:focus + label,
+    &:not(:placeholder-shown) + label {
+      top: -6px;
+      color: $color-main-text-07;
+      font-size: 12px;
+    }
+  }
+  .passwordEyeIcon {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    cursor: pointer;
+  }
+}

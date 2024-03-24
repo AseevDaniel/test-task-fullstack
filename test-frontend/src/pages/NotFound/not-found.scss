@@ -1,0 +1,18 @@
+.notFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  svg {
+    height: 100vh;
+    width: 100vw;
+  }
+  .returnLink {
+    position: absolute;
+    font-size: 3rem;
+    top: 12vw;
+    left: 10vw;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+}

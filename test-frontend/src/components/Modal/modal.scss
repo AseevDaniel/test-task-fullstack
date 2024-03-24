@@ -1,0 +1,33 @@
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  .modalWindow {
+    position: relative;
+    background: $color-main-light;
+    width: 600px;
+    min-height: 200px;
+    padding: 60px 40px;
+    .closeIcon {
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      right: 12px;
+      top: 12px;
+      cursor: pointer;
+      transition: $transition-duration;
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+}

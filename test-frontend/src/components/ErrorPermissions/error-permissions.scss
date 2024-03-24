@@ -1,0 +1,57 @@
+.error-field {
+  h3 {
+    margin: 5px 0 0;
+    text-align: left;
+    @include font-josefin(
+      $weight: medium,
+      $size: 14px,
+      $colour: $color-main-text,
+      $lh: 16px
+    );
+  }
+
+  ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+
+    .permission {
+      width: 100%;
+      text-align: left;
+      @include font-josefin(
+        $weight: light,
+        $size: 14px,
+        $colour: $color-main-text,
+        $lh: 16px
+      );
+
+      @media screen and (min-width: 992px) {
+        width: 50%;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 8px;
+        width: 6px;
+        height: 6px;
+        background: $color-main-border;
+        border-radius: 50%;
+      }
+
+      &--valid {
+        &::before {
+          background: $color-theme-light-hover;
+        }
+      }
+    }
+  }
+}

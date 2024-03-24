@@ -1,0 +1,23 @@
+.button {
+  @include font-josefin(medium, 16px, $color-main-text, 20px, -0.03em);
+  padding: 12px 20px 10px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: $transition-duration;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $block-min-height;
+  background: $color-theme-light;
+  border: 1px solid $color-theme-light;
+  &:hover {
+    background: $color-theme-light-hover;
+  }
+  &:disabled {
+    background: $color-disabled;
+    border: 1px solid $color-disabled;
+    color: $color-main-text-07;
+    pointer-events: none;
+  }
+}

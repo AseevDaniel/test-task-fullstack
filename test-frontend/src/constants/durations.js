@@ -1,0 +1,2 @@
+export const POPUP_ANIMATION_DURATION = 1000;
+export const POPUP_LIFE_TIME = 3000;

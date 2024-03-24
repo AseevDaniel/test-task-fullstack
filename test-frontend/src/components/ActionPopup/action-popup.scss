@@ -1,0 +1,42 @@
+.actionPopup {
+  position: fixed;
+  right: 16px;
+  top: 24px;
+  max-width: 200px;
+  background: $color-main-light;
+  border-radius: 18px;
+  padding: 18px 24px;
+  box-shadow: 0px 0px 30px -15px $color-main-text;
+  z-index: 9999;
+  opacity: 1;
+  animation: fade-in $animation-duration forwards;
+  .message {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    &:before {
+      content: "i";
+      margin-right: 10px;
+      height: 16px;
+      width: 16px;
+      min-width: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      color: $color-main-light;
+      font-size: 12px;
+      line-height: 19px;
+      background: $color-theme-light;
+    }
+  }
+  &.failure {
+    .message {
+      &:before {
+        background: $color-error;
+      }
+    }
+  }
+  &.hidePopup {
+    animation: fade-out $animation-duration forwards;
+  }
+}

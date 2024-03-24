@@ -1,0 +1,14 @@
+.userSettings {
+  top: -40px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid $color-main-border;
+  width: 96%;
+  margin: 0 auto;
+  padding: 52px 12px 12px;
+  background: $color-main-light;
+  animation: fade-in $transition-duration forwards;
+  &.hideBlock {
+    animation: fade-out $transition-duration forwards;
+  }
+}

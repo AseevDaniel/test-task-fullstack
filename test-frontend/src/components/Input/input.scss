@@ -1,0 +1,12 @@
+.input {
+  background: $color-main-light;
+  border: 1px solid $color-main-border;
+  padding: 12px;
+  height: 44px;
+  width: 100%;
+  @include font-josefin(regular, 14px, $color-main-text, 18px, 0.015em);
+  &-error {
+    border: 1px solid $color-error;
+    animation: shake 0.2s ease-in-out 0s 2;
+  }
+}

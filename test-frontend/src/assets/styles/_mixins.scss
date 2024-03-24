@@ -1,0 +1,45 @@
+@mixin font(
+  $weight: false,
+  $size: false,
+  $colour: false,
+  $lh: false,
+  $ls: false
+) {
+  @if $weight == bold {
+    font-weight: 700;
+  } @else if $weight == semiBold {
+    font-weight: 600;
+  } @else if $weight == medium {
+    font-weight: 500;
+  } @else if $weight == light {
+    font-weight: 300;
+  } @else if $weight == extraLight {
+    font-weight: 200;
+  } @else {
+    font-weight: 400;
+  }
+
+  @if $size {
+    font-size: $size;
+  }
+  @if $colour {
+    color: $colour;
+  }
+  @if $lh {
+    line-height: $lh;
+  }
+  @if $ls {
+    letter-spacing: $ls;
+  }
+}
+
+@mixin font-josefin(
+  $weight: false,
+  $size: false,
+  $colour: false,
+  $lh: false,
+  $ls: false
+) {
+  font-family: "Josefin Sans", sans-serif;
+  @include font($weight, $size, $colour, $lh, $ls);
+}
